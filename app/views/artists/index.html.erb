@@ -4,4 +4,5 @@
 <% @artists.each do |artist| %>
 <h4><%= artist.name %></h4>
 <p><%= artist.biography %></p>
+<%= image_tag artist.image_url %>
 <% end %>
