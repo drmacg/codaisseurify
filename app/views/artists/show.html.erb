@@ -1,1 +1,5 @@
 <h4><%= @artist.name %></h4>
+
+<% @artist.songs.each do |song| %>
+ <%= song.track_number %>. <%= song.name%> (<%= song.duration%>)<br>
+<% end %>
