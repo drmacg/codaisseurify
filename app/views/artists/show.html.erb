@@ -1,1 +1,10 @@
 <h4><%= @artist.name %></h4>
+<%= link_to "[Delete artist]", artist_path(@artist), method: :delete, data: { confirm: "Are you sure?" } %><br>
+
+<% @artist.songs.each do |song| %>
+ <%= song.track_number %>. <%= song.name%> (<%= song.duration%>)
+<%= link_to "[Delete]", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" } %>
+ <br>
+<% end %>
+
+<%= render 'songs/form' %>
