@@ -57,4 +57,5 @@ gem 'cloudinary', '1.2.3'
 
 group :test do
   gem 'capybara', '~> 2.9', '>= 2.9.1'
+  gem 'shoulda-matchers', '~> 3.1'
 end
