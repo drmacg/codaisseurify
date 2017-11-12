@@ -64,3 +64,6 @@ group :test do
 end
 
 gem 'rails_12factor', group: :production
+
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails', '~> 4.3.1'

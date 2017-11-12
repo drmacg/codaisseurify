@@ -1,10 +1,23 @@
-<h4><%= @artist.name %></h4>
-<%= link_to "[Delete artist]", artist_path(@artist), method: :delete, data: { confirm: "Are you sure?" } %><br>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1><%= @artist.name %></h1>
+  </div>
 
-<% @artist.songs.each do |song| %>
- <%= song.track_number %>. <%= song.name%> (<%= song.duration%>)
-<%= link_to "[Delete]", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" } %>
- <br>
-<% end %>
+  <div class="panel-body">
+    <%= link_to "Delete artist", artist_path(@artist), method: :delete, class: "btn btn-primary", data: { confirm: "Are you sure?" } %><br>
 
-<%= render 'songs/form' %>
+    <h3>Songs</h3>
+    <div class="panel-body">
+      <% @artist.songs.each do |song| %>
+        <%= song.track_number %>. <%= song.name%> (<%= song.duration%>)
+        <%= link_to "[Delete]", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" } %>
+        <br>
+      <% end %>
+    </div>
+    <h3>Create song</h3>
+
+    <div class="panel-body">
+      <%= render 'songs/form' %>
+    </div>
+  </div>
+</div>
