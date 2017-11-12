@@ -1,15 +1,20 @@
-<h1>New song</h1>
-
-
 <%= form_for [@artist, @artist.songs.new] do |s| %>
-  <%= s.label :track_number %>
-  <%= s.number_field :track_number %>
-  <br>
-  <%= s.label :name %>
-  <%= s.text_field :name %>
-  <br>
-  <%= s.label :duration %>
-  <%= s.text_field :duration %>
-  <br>
-  <%= s.submit "Create" %>
+  <div class="form-group">
+    <%= s.label :track_number %>
+    <br>
+    <%= s.number_field :track_number %>
+  </div>
+  <div class="form-group">
+    <%= s.label :name %>
+    <br>
+    <%= s.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= s.label :duration %>
+    <br>
+    <%= s.text_field :duration %>
+  </div>
+  <div class="actions">
+    <%= s.submit "Create" %>
+  </div>
 <% end %>

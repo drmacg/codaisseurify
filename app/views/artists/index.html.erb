@@ -1,8 +1,26 @@
-<h1>Codaisseurify</h1>
-
-
-<% @artists.each do |artist| %>
-<h4><%= link_to artist.name, artist %></h4>
-<p><%= artist.biography %></p>
-<%= image_tag artist.image_url %>
-<% end %>
+<div class="row">
+  <div class="col-md-9">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1>Codaisseurify</h1>
+      </div>
+      <div class="panel-body">
+        <% @artists.each do |artist| %>
+          <div class="row">
+            <div class="col-md-2">
+              <h4><%= link_to artist.name, artist %></h4>
+            </div>
+            <div class="col-md-4">
+              <%= image_tag artist.image.thumbnail %>
+            </div>
+            <div class="col-md-6 right">
+              <p>
+                <%= artist.biography %>
+              </p>
+            </div>
+          </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
