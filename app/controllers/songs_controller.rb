@@ -6,7 +6,15 @@ class SongsController < ApplicationController
     artist = Artist.find(params[:artist_id])
     @song.artist = artist
     @song.save
-    
+
     redirect_to @song.artist, notice: "Song created."
+  end
+
+  def destroy
+    @song = Song.find(params[:id])
+
+    @song.destroy
+
+    redirect_to @song.artist, notice: "Song deleted."
   end
 end
