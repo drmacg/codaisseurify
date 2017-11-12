@@ -41,3 +41,17 @@ song_3 = Song.create!(
   duration: "4:20",
   artist: indexi
 )
+
+song_4 = Song.create!(
+  name: "Istina mašina",
+  track_number: 1,
+  duration: "4:40",
+  artist: time
+)
+
+song_5 = Song.create!(
+  name: "Za koji život treba da se rodim",
+  track_number: 2,
+  duration: "10:05",
+  artist: time
+)
