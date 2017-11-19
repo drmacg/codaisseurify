@@ -11,8 +11,19 @@ function createSong(artist_id, track_number, name, duration) {
     dataType: "json"
   })
   .done(function(data) {
+    var div = $('<div class="song"></div>');
+
     var songData = document.createTextNode(track_number + ". " + name + " (" + duration + ")");
-    $("#song-list").append(songData);
+    var link = $('<a class="delete-song" href="#"> [Delete]</a>')
+      .attr('data-id', data.song.id)
+      .bind('click', deleteSong);
+    var br = $("<br>");
+
+    div.append(songData);
+    div.append(link);
+    div.append(br);
+
+    $("#song-list").append(div);
   })
 
   .fail(function(error) {
@@ -45,6 +56,12 @@ function submitSong(event) {
   var artist_id = $("#artist-id").html();
 
   createSong(artist_id, track_number, name, duration);
+
+  $("#song_track_number").val(null);
+  $("#song_name").val(null);
+  $("#song_duration").val(null);
+
+  return false;
 }
 
 function deleteAllSongs(event) {
