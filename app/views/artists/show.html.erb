@@ -10,9 +10,11 @@
     <h3>Songs</h3>
     <div id="song-list" class="panel-body">
       <% @artist.songs.each do |song| %>
-        <%= song.track_number %>. <%= song.name%> (<%= song.duration%>)
-        <%= link_to "[Delete]", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" } %>
-        <br>
+        <div>
+          <%= song.track_number %>. <%= song.name%> (<%= song.duration%>)
+          <a class="delete-song" href="#" data-id="<%= song.id %>">[Delete]</a>
+          <br>
+        </div>
       <% end %>
     </div>
     <h3>Create song</h3>

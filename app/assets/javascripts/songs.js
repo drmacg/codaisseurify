@@ -20,6 +20,22 @@ function createSong(artist_id, track_number, name, duration) {
   });
 }
 
+function deleteSong() {
+  var link = $(this);
+  var artist_id = $("#artist-id").html();
+  var song_id = link.data('id');
+
+  $.ajax({
+    type: "DELETE",
+    url: "/api/artists/" + artist_id + "/songs/" + song_id,
+    contentType: "application/json",
+    dataType: "json"
+  })
+  .done(function(data) {
+    link.parent().remove();
+  });
+}
+
 function submitSong(event) {
   event.preventDefault();
   var track_number = $("#song_track_number").val();
@@ -33,4 +49,5 @@ function submitSong(event) {
 
 $(document).ready(function() {
    $("form").bind('submit', submitSong);
+   $(".delete-song").bind('click', deleteSong);
 });
