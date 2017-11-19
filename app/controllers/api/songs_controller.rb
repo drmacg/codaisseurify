@@ -4,6 +4,9 @@ class Api::SongsController < ApplicationController
   def create
     song = Song.new(song_params)
 
+    artist = Artist.find(params[:artist_id])
+    song.artist = artist
+
     if song.save
       render status: 201, json: {
         message: "Song successfully created",
