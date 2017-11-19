@@ -1,13 +1,14 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h1><%= @artist.name %></h1>
+    <div id="artist-id"><%=@artist.id%></div>
   </div>
 
   <div class="panel-body">
     <%= link_to "Delete artist", artist_path(@artist), method: :delete, class: "btn btn-primary", data: { confirm: "Are you sure?" } %><br>
 
     <h3>Songs</h3>
-    <div class="panel-body">
+    <div id="song-list" class="panel-body">
       <% @artist.songs.each do |song| %>
         <%= song.track_number %>. <%= song.name%> (<%= song.duration%>)
         <%= link_to "[Delete]", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" } %>
