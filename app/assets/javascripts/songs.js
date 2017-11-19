@@ -47,7 +47,16 @@ function submitSong(event) {
   createSong(artist_id, track_number, name, duration);
 }
 
+function deleteAllSongs(event) {
+  event.preventDefault();
+
+  $.each($(".song"), function(index, song) {
+    $(song).find("a").trigger('click');
+  });
+}
+
 $(document).ready(function() {
    $("form").bind('submit', submitSong);
    $(".delete-song").bind('click', deleteSong);
+   $(".delete-all").bind('click', deleteAllSongs);
 });

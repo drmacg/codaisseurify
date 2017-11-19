@@ -10,13 +10,15 @@
     <h3>Songs</h3>
     <div id="song-list" class="panel-body">
       <% @artist.songs.each do |song| %>
-        <div>
+        <div class="song">
           <%= song.track_number %>. <%= song.name%> (<%= song.duration%>)
           <a class="delete-song" href="#" data-id="<%= song.id %>">[Delete]</a>
           <br>
         </div>
       <% end %>
     </div>
+    <a class="btn btn-primary delete-all" href="#">Delete all songs</a>
+
     <h3>Create song</h3>
 
     <div class="panel-body">
