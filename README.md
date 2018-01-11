@@ -7,7 +7,7 @@ First assignment for Codaiseur Academy was to create a new Rails app called Coda
 
 These are the steps I followed when working on this app:
 
-1. Generate the App 
+1. Generating the App 
 2. Creating two models: Song and Artist
 3. Creating  inital data adding seeds to the database with some songs and artists
 4. Adding index and show page
