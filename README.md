@@ -4,7 +4,7 @@
 
 First assignment for Codaiseur Academy was to create a new Rails app called Codaisseurify. This application is charge of managing a collection of songs and their associated artists.
 
-##Steps
+## Steps
 
 These are the steps I followed when working on this app:
 
@@ -29,8 +29,9 @@ rake db:create db:migrate db:seed
 rails server
 ```
 
-#Preview
+# Preview
 
 List of artist 
 
 ![alt text](http://res.cloudinary.com/dic1tttru/image/upload/v1515678664/Screen_Shot_2018-01-11_at_14.50.03_yiv9bm.png)
+![alt text](http://res.cloudinary.com/dic1tttru/image/upload/v1515678716/Screen_Shot_2018-01-11_at_14.51.22_kdynxb.png)
