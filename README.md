@@ -1,4 +1,3 @@
-# README
 
 # Codaisseurify
 
@@ -34,4 +33,7 @@ rails server
 List of artist 
 
 ![alt text](http://res.cloudinary.com/dic1tttru/image/upload/v1515678664/Screen_Shot_2018-01-11_at_14.50.03_yiv9bm.png)
+
+Artist page with songs
+
 ![alt text](http://res.cloudinary.com/dic1tttru/image/upload/v1515678716/Screen_Shot_2018-01-11_at_14.51.22_kdynxb.png)
