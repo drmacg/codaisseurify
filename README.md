@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Codaisseurify
 
-Things you may want to cover:
+First assignment for Codaiseur Academy was to create a new Rails app called Codaisseurify. This application is charge of managing a collection of songs and their associated artists.
 
-* Ruby version
+##Steps
 
-* System dependencies
+These are the steps I followed when working on this app:
 
-* Configuration
+1. Generate the App 
+2. Creating two models: Song and Artist
+3. Creating  inital data adding seeds to the database with some songs and artists
+4. Adding index and show page
+5. Adding create and delete button 
+6. Testing models and associations 
+7. Styling with Bootstrap 
 
-* Database creation
 
-* Database initialization
+## Running Locally
 
-* How to run the test suite
+Make sure you have [Ruby](https://www.ruby-lang.org/en/) and [Bundler](http://bundler.io/) installed.
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+git clone https://github.com/gbosnjak/codaisseurify
+cd codaisseurify
+bundle install
+rake db:create db:migrate db:seed
+rails server
+```
 
-* Deployment instructions
+##Preview
 
-* ...
+List of artist 
+
+![image](https://{Screen Shot 2018-01-11 at 14.33.40.png})
