@@ -29,8 +29,7 @@ rake db:create db:migrate db:seed
 rails server
 ```
 
-##Preview
+#Preview
 
 List of artist 
-
-![image](https://{Screen Shot 2018-01-11 at 14.33.40.png})
+[![] http://res.cloudinary.com/dic1tttru/image/upload/v1515678664/Screen_Shot_2018-01-11_at_14.50.03_yiv9bm.png]
